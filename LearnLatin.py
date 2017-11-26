@@ -1,7 +1,7 @@
 import csv
 import random
 
-fileName = "databank1.csv"
+fileName = "database1.csv"
 READ = 'r'
 WRITE = 'w'
 APPEND = 'a'
@@ -13,7 +13,7 @@ print()
 
 #Importieren der Daten aus dem CSV-Dokument
 csvFile = open(fileName, mode = READ)
-dataList = csv.reader(csvFile)
+dataList = csv.reader(csvFile, delimiter=';')
 for current in dataList:
     allDataList.append(current)
 csvFile.close()
