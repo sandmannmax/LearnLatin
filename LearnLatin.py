@@ -34,7 +34,7 @@ while True:
         print("Leider falsch! Überlege noch einmal genau.")
 #Kasusfunktionsüberprüfung
 while True:
-    answer2In = input("Bitte gebe nun die vorliegende Kasusfunktion ein (nur die Funktion ohne Kasus, z.B. als Attribut: ")
+    answer2In = input("Bitte gebe nun die vorliegende Kasusfunktion ein (nur die Funktion ohne Kasus, z.B. als Attribut): ")
     if answer2In.upper() == allDataList[randNum][1].upper():
         break
     else: 
