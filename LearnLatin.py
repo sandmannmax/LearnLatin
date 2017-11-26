@@ -48,7 +48,7 @@ while True:
     print()
     print()
     goOn = input("Fortsetzen? j/n: ")
-    while goOn != 'j' or goOn != 'n':
+    while goOn != 'j' and goOn != 'n':
         goOn = input("Fehler! Bitte noch einmal... j/n: ")
     if goOn == 'n':
         break
