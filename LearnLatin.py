@@ -1,5 +1,6 @@
 import csv
 import random
+import sys
 
 fileName = "database1.csv"
 READ = 'r'
@@ -30,21 +31,27 @@ while True:
     while True:
         answer1In = input("Bitte gebe den vorliegenden Kasus ein: ")
         if answer1In.upper() == 'EXIT':
+            sys.exit("ERROR01 Programm gestoppt")
+        elif answer1In.upper() == 'HELP':
+            print("Die Lösung ist {}.".format(allDataList[randNum][0]))
             break
         elif answer1In.upper() == allDataList[randNum][0].upper():
             break
         else: 
-          print("Leider falsch! Überlege noch einmal genau.")
+            print("Leider falsch! Überlege noch einmal genau.")
     #Kasusfunktionsüberprüfung
     while True:
         answer2In = input("Bitte gebe nun die vorliegende Kasusfunktion ein (nur die Funktion ohne Kasus, z.B. als Attribut): ")
         if answer2In.upper() == 'EXIT':
-            break 
+            sys.exit("ERROR01 Programm gestoppt")
+        elif answer2In.upper() == 'HELP':
+            print("Die Lösung ist {}.".format(allDataList[randNum][1]))
+            break
         elif answer2In.upper() == allDataList[randNum][1].upper():
-              break
+            print("Gut gemacht!")
+            break
         else: 
             print("Leider falsch! Überlege noch einmal genau.")
-    print("Gut gemacht!")
     print()
     print()
     goOn = input("Fortsetzen? j/n: ")
